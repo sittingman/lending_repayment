@@ -7,7 +7,7 @@
 
 **Target audiences:** Lending Club loans underwriters 
 
-**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action/). 2007-2011 [Data Dictionary] (https://github.com/sittingman/capstone/blob/master/lending/data_dict.ipynb)
+**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action/). 2007-2011 [Data Dictionary](https://github.com/sittingman/capstone/blob/master/lending/data_dict.ipynb)
 
 **Approach:**
 
