@@ -13,4 +13,6 @@
 
 The dataset has 144 features, in which 'loan_status' will serve as the target feature. Then narrow down to features that have no or few missing values. Also disregard features that cannot be known in advance (e.g. late fees charged). Use visualization to assess the rest to identify ones that have either positive or negative correlation to the default rate. Apply classification models to find the best features set that has the highest prediction accuracy.
 
-[**Data Wrangling**](https://github.com/sittingman/capstone/blob/master/lending/lending.ipynb)
+[**Data Wrangling**](https://github.com/sittingman/capstone/blob/master/lending/data_wrangling.ipynb)
+
+[**Exploratory Analysis**](https://github.com/sittingman/capstone/blob/master/lending/data_exploratory.ipynb)
