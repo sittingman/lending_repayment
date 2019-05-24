@@ -5,9 +5,9 @@
 
 **Impact:** Minimize chance of granting loans to applicants who would have high chance of default, which translate to profit loss to the lender
 
-**Target audiences:** Lending Club loans underwriters
+**Target audiences:** Lending Club loans underwriters 
 
-**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action/). 2007-2011
+**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action/). 2007-2011 [Data Dictionary] (https://github.com/sittingman/capstone/blob/master/lending/data_dict.ipynb)
 
 **Approach:**
 
