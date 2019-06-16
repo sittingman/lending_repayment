@@ -16,3 +16,5 @@ The dataset has 144 features, in which 'loan_status' will serve as the target fe
 [**Data Wrangling**](https://github.com/sittingman/lending_repayment/blob/master/data_wrangling.ipynb)
 
 [**Exploratory Analysis**](https://github.com/sittingman/lending_repayment/blob/master/data_exploratory.ipynb)
+
+[**Inference Statistics**](https://github.com/sittingman/lending_repayment/blob/master/inference_stat.ipynb)
