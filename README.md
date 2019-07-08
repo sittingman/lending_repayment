@@ -32,3 +32,10 @@ Below is the summary
 | ------ | -------- |
 |loan_status| purpose |
 |           | credit history |
+|           | Debt to Income Ratio (DTI)|
+|           | Number of credit line|
+
+[**4. Machine Learning**]
+
+The problem is a classification problem. We will apply two methods and measure their accuracies.
+
