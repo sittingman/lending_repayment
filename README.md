@@ -15,27 +15,31 @@ LendingClub enables borrowers to create unsecured personal loans between $1,000 
 
 [**1.Data Wrangling**](https://github.com/sittingman/lending_repayment/blob/master/data_wrangling.ipynb)
 
-The dataset has 144 features, in which 'loan_status' will serve as the target feature. Some of the columns have mostly missing data as those involve personal privacy and will dropped. Some information cannot be known in advance (e.g. late fees charged) so thely cannot be used to develop the model either. 
+The dataset has 144 features, in which 'loan_status' will serve as the target feature. Some of the columns have mostly missing data as those involve personal privacy and will dropped. Some information cannot be known in advance (e.g. late fees charged) so thely cannot be used to develop the model either. Some feature will require data type modifications such as converting text into numeric values for model fitting later. The cleaned data will be saved off as a seperate file to simplify data access for the following steps
 
 [**2.Exploratory Analysis**](https://github.com/sittingman/lending_repayment/blob/master/data_exploratory.ipynb)
 
-In the exploratory analysis part, we will try to identify correleation (either positive or negative) among features with loan "paid off" rates. Loan paid off rate is calculated by all loans being paid off (target = 1) versus all loans (target = 1 + target = 0) within specific feature being observed.
+In the exploratory analysis part, we will try to identify correleation (either positive or negative) among features with loan "paid off" rates through visualization. The goal is to quickly identify high correlation candidates before applying any alogrithms.
+Note: Loan paid off rate is calculated by all loans being paid off (target = 1) versus all loans (target = 1 + target = 0) within specific feature being observed.
+
 
 [**3.Inference Statistics**](https://github.com/sittingman/lending_repayment/blob/master/inference_stat.ipynb)
 
-Post the exploratory analysis, we identified few features that may have correleation with loan paid off rates. We now need to run statistical tests (chi-square) to ensure that the observed correlations are statistically significant.
+Post the exploratory analysis, we identified few features that may have correleation with loan paid off rates. We now run statistical tests (chi-square) to ensure that the observed correlations are statistically significant.
+
+[**4. Machine Learning**]
 
 At this point, we have identified the useful features that could help predicting whether the loan will be paid off or default.
-Below is the summary
+Here is the summary
 
 | Target | Features |
 | ------ | -------- |
 |loan_status| purpose |
 |           | credit history |
 |           | Debt to Income Ratio (DTI)|
-|           | Number of credit line|
+|           | Number of credit line |
+|           | Applicant State |
 
-[**4. Machine Learning**]
 
-The problem is a classification problem. We will apply two methods and measure their accuracies.
+This problem is a classification problem. We will apply two methods and measure their accuracies - Logistics Regression and Random Forest
 
