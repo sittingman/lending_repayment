@@ -27,7 +27,7 @@ Note: Loan paid off rate is calculated by all loans being paid off (target = 1) 
 
 Post the exploratory analysis, we identified few features that may have correleation with loan paid off rates. We now run statistical tests (chi-square) to ensure that the observed correlations are statistically significant.
 
-[**4. Machine Learning**]
+[**4. Machine Learning**](https://github.com/sittingman/lending_repayment/blob/master/machine_learning.ipynb)
 
 At this point, we have identified the useful features that could help predicting whether the loan will be paid off or default.
 Here is the summary
