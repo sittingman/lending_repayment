@@ -9,7 +9,7 @@ LendingClub enables borrowers to create unsecured personal loans between $1,000 
 **Clients & Impact:** 
 - Clients are the investors who utlimately invest in the unsecured personal loans The analysis will help investors on undestand the risks of the unsecured loans and help them identify loans that will more likely to be fully paid off. It will also help investors to set interest rates based on risks level.
 
-**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action/). 2007-2011 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
+**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action). 2007-2011 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
 
 **Approach:**
 
@@ -42,4 +42,8 @@ Here is the summary
 
 
 This problem is a classification problem. We will apply two methods and measure their accuracies - Logistics Regression and Random Forest
+
+We will use 2012-2013 loan data as final validation set to access the model prediction power ([test data transformation steps](https://github.com/sittingman/lending_repayment/blob/master/test_data_cleansing.ipynb))
+
+
 
