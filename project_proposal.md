@@ -1,4 +1,4 @@
-**Lending Club Loan Repayment Analysis**
+### Lending Club Loan Repayment Analysis
 
 **Business Overview**: Lending Club enables borrowers to create
 unsecured personal loans between \$1,000 and \$40,000. The standard loan
