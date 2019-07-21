@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Lending Club Loan Repayment Analysis
 
 **Business Overview**: Lending Club enables borrowers to create
