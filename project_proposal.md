@@ -12,11 +12,7 @@ investors a service fee.
 **Problem Statement** -- how to predict the likelihood of a loan being
 repaid in full, based on information supplied by the borrowers.
 
-**Clients** - Investors who invest in the unsecured personal loans. The
-analysis will help them to understand the risks of the unsecured loans
-and identify loans that will more likely to be fully paid off. It will
-also help investors to set higher interest rates for loans which may
-have higher chances on default to compensate for the risks.
+**Clients** - Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify approved loans that may have high risks of default based on historial information. Lending Club credit risk team can then executed needed measures to minimize the risk.
 
 **Data Source** -- Lending Club provided historical loan information on
 its [website](https://www.lendingclub.com/info/download-data.action).
