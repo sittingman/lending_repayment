@@ -4,10 +4,10 @@
 Lending Club enables borrowers to create unsecured personal loans between $1,000 and $40,000. The standard loan period is three years. Investors can search and browse the loan listings on Lending Club website and select loans that they want to invest in based on the information supplied about the borrower, **amount of loan, loan grade, and loan purpose**. Investors make money from interest. Lending Club makes money by charging borrowers an origination fee and investors a service fee.
 
 **Objective:** 
-- Predict the likelihood of loan repayment from an applicant based on applicant information
+- Predict the likelihood of loan repayment based on applicant information
 
 **Clients & Impact:** 
-- Clients are the investors who invest in the unsecured personal loans The analysis will help investors understanding the risks of the unsecured loans and help them identify loans that will more likely be fully paid off. It will also help investors to set interest rates based on risks level.
+- Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify approved loans that may have high risks of default based on historial information. Lending Club credit risk team can then executed needed measures to minimize the risk.
 
 **Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action). 2007-2011 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
 
@@ -25,7 +25,7 @@ The cleaned data has been saved off as a separate file to simplify data access.
 
 [**2.Exploratory Analysis**](https://github.com/sittingman/lending_repayment/blob/master/data_exploratory.ipynb)
 
-In the exploratory analysis part, we want to identify correlations (either positive or negative) among features with "loan paid off" rate through visualizations. The goal is to quickly identify high correlation variable before applying any machine learning algorithms.
+In the exploratory analysis part, we want to identify correlations (either positive or negative) among features with "loan paid off" rate through visualizations. The goal is to quickly identify high correlation variables before applying any machine learning algorithms.
 Note: Loan paid off rate is calculated by all loans being paid off (target = 1) versus all loans (target = 1 + target = 0) within specific feature being observed. Target = 0 means loan defaulted.
 
 **Findings**:  features that show potential correlations with the loan paid off rate are homeownership status, loan purpose, years of credit, Debt to Income ratio, % of credit usage, applicant's state. Data between 2007-2008 cannot be used as paid off rates were skewed by the financial crisis.
@@ -53,7 +53,7 @@ Here is the summary
 
 This problem is a classification problem. We will apply two methods and measure their accuracies (using F1 score) - Logistics Regression and Random Forest
 
-We will use 2012-2013 loan data as final validation set to access the model prediction power ([test data transformation steps](https://github.com/sittingman/lending_repayment/blob/master/test_data_cleansing.ipynb))
+We will use 2012-2013 loan data as final validation set to access the model prediction power ([test data transformation](https://github.com/sittingman/lending_repayment/blob/master/test_data_cleansing.ipynb))
 
 
 
