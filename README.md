@@ -15,7 +15,7 @@ Lending Club enables borrowers to create unsecured personal loans between $1,000
 **Approach:**
 
 
-**Note**: To run all the workbook on personal station, please first download "data" zip file, extract and put the files into a folder called "data" right next to all the jupyter notebooks.
+**Note**: To run all the notebooks on personal station, please first download "data" zip file, extract and put the files into a folder called "data" right next to all the jupyter notebooks.
 
 [**1.Data Wrangling**](https://github.com/sittingman/lending_repayment/blob/master/data_wrangling.ipynb)
 
