@@ -79,14 +79,14 @@ Logistic Regression has the smallest Type 1 error, which makes it a winner for t
 
 ### Conclusion
 
-- Lending Club has its own set of credit underwriting policy. Loan requests that didn't meet the policy were declined. Approved loans had an average of ~15%-18% of loan default rate, which is higher than residential and consumer loans default rates within the United States among similar period based on [FRB](https://www.federalreserve.gov/releases/chargeoff/delallsa.htm)
-- Applying Logistic Regression algorithms as suggested by the above analysis will help Lending Club to identify ~9% of the high risks loans in advance. This enables Lending Club to monitor those loans and plan contingency to minimize loss should default happens. It helps Lending Club to lower its default rate as low as 6%, which is in line with the industry standard.
-- The model does introduce Type 2 error which may result in unnecessary efforts on monitoring misclassified high risks loans. Lending Club could prioritize efforts based on the loan amount. We will add loan amount as a new feature to evaluate if loan amount may impact paid off rate to reduce Type 2 error.
+- Lending Club has its own set of credit underwriting policy. Loan requests that didn't meet the policy were declined. Approved loans had an average of ~15%-18% of default rate, which is higher than residential and consumer loans default rates within the United States during periods based on [FRB](https://www.federalreserve.gov/releases/chargeoff/delallsa.htm)
+- Applying Logistic Regression algorithms as suggested by the above analysis will help Lending Club to identify ~9% of the high risks loans in advance. This enables Lending Club to monitor those loans and plan contingency to minimize loss should default happens. It helps Lending Club to lower its overall default rate as low as 6%, which is more in line with the industry standard.
+- The model does introduce Type 2 error which may result in unnecessary efforts on monitoring misclassified high risks loans. Lending Club should prioritize efforts based on the loan amount. As a next step, we will add loan amount as a new feature to evaluate if loan amount may impact paid off rate to reduce Type 2 error.
 
 ### Further Improvements
 
-- Introduce categorical features into the model to access if we can seek further improvement on reducing Type 1 error.
-- Cross-validation should be done in the form of Time Series Nested Cross-Validation to avoid contamination of time component on predicting results. For example, business cycles, which are time-sensitive, could impact the individuals' ability to pay off loans.
+- Introduce categorical features and also loan amount into the model to access if we can obtain further improvement on reducing Type 1 error.
+- Cross-validation should be done in the form of Time Series Nested Cross-Validation to avoid contamination of time component on predicting results. For example, business cycles are time-sensitive and could impact the individuals' ability to pay off loans. The current validation methodology ignored the timing impacts.
 - Access 1-2 more classification models to have a broader measurement for model performance. I would consider Extreme Gradient Boosting and Support Vector Machines, for example.
 - Features engineering which includes clustering to capture potential patterns that were not captured by looking at one feature alone.
 - Run correlation test across features to confirm that features are independent of each other
