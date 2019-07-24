@@ -4,12 +4,13 @@
 Lending Club enables borrowers to create unsecured personal loans between $1,000 and $40,000. The standard loan period is three years. Investors can search and browse the loan listings on Lending Club website and select loans that they want to invest in based on the information supplied about the borrower, **amount of loan, loan grade, and loan purpose**. Investors make money from interest. Lending Club makes money by charging borrowers an origination fee and investors a service fee.
 
 **Objective:** 
-- Predict the likelihood of loan repayment based on applicant information
+- Predict the likelihood of paid off for loans that were approved by Lending Club. 
 
 **Clients & Impact:** 
-- Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify approved loans that may have high risks of default based on historial information. Lending Club credit risk team can then executed needed measures to minimize risks.
+- Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify approved loans that may have high risks of default based on historial information. Lending Club can placed more attentions on monitoring those loans in order to plan contingencies on risks mitigation.
 
-**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action). 2007-2011 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
+**Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action). 2007-2013 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
+- Use data from 2007-2012 as train set, and 2013 data as final test data
 
 **Approach:**
 
@@ -17,9 +18,9 @@ Lending Club enables borrowers to create unsecured personal loans between $1,000
 
 The dataset has 144 features, in which 'loan_status' will serve as the target feature. 
 
-Some columns have mostly missing data and will be dropped. Some information cannot be known in advance (e.g. late fees charged) so they cannot be used to develop the model. 
+Some columns have mostly missing data and will be dropped. Some information cannot be known in advance (e.g. settlement date) and cannot be used to develop the model. 
 
-Some features will require data type modifications such as converting text into numeric values for model fitting later. 
+Some features will require data type modifications such as converting text into numeric values for model training. 
 
 The cleaned data has been saved off as a separate file to simplify data access.
 
@@ -34,7 +35,7 @@ Note: Loan paid off rate is calculated by all loans being paid off (target = 1) 
 
 Post the exploratory analysis, we identified a few features that may correlate with the loan paid off rates. We now run statistical tests (chi-square) to ensure that the observed correlations are statistically significant.
 
-**Findings**: All features selected indicate dependence to loan paid off rate and they can be used for machine learning. Debt to Income ratio (DTI) requires binning to show statistical dependence.
+**Findings**: All features selected indicate dependence to loan paid off rate and they can be used for machine learning.
 
 [**4. Machine Learning**](https://github.com/sittingman/lending_repayment/blob/master/machine_learning.ipynb)
 
@@ -51,9 +52,40 @@ Here is the summary
 |           | Applicant State |
 
 
-This problem is a classification problem. We will apply two methods and measure their accuracies (using F1 score) - Logistics Regression and Random Forest
+This problem is a classification problem. We will apply two methods and measure their accuracies (using F1 score and Ty) - Logistics Regression and Random Forest
 
-We will use 2012-2013 loan data as final validation set to access the model prediction power ([test data transformation](https://github.com/sittingman/lending_repayment/blob/master/test_data_cleansing.ipynb))
+For the first phrase modeling, we will focus on the numeric variables, which are 
+- years of credit
+- DTI
+- total credit lines
+
+Remaining variables will be access in the next phrase for model improvement.
+
+**Findings**
+
+Below is the performance summary among baseline (no modeling), Logistic Regression, and Random Forest
+
+|Model | F1 score (cross validated)| Type 1 error | Type 2 error |
+|----- | -------|------|-------|
+|Baseline | 0.9154| 3,431 (15%) | 0 (0%) |
+|Logistic Regression | 0.6704 | 1,616 (7.2%) | 8585 (38%) |
+|Random Forest | 0.9203 | 3,077 (13.7%) | 1584 (7%) |
+
+Logistic Regression has the smallest Type 1 error, which makes it a winner for the analysis. On the flip size, it introduces quite significant Type 2 error, which may result in unnecessary efforts on monitoring misclassified high risks loans. Lending Club could prioritize efforts based on the loan amount. As a next step, we will add loan amount as a new feature to identify any correlations among loan amount and paid off rate.
+
+### Conclusion
+
+- Lending Club has its own set of credit underwriting policy. Loan requests that didn't meet the policy were declined. Approved loans had an average of ~15%-18% of loan default rate, which is higher than residential and consumer loans default rates within the United States among similar period based on [FRB](https://www.federalreserve.gov/releases/chargeoff/delallsa.htm)
+- Applying Logistic Regression algorithms as suggested by the above analysis will help Lending Club to identify ~9% of the high risks loans in advance. This enables Lending Club to monitor those loans and plan contingency to minimize loss should default happens. It helps Lending Club to lower its default rate as low as 6%, which is in line with the industry standard.
+- The model does introduce Type 2 error which may result in unnecessary efforts on monitoring misclassified high risks loans. Lending Club could prioritize efforts based on the loan amount. We will add loan amount as a new feature to evaluate if loan amount may impact paid off rate.
+
+### Further Improvements
+
+- Introduce categorical features into the model to access if we can seek further improvement on reducing Type 1 error.
+- Cross-validation should be done in the form of Time Series Nested Cross-Validation to avoid contamination of time component on predicting results. For example, business cycles, which are time-sensitive, could impact the individuals' ability to pay off loans.
+- Access 1-2 more classification models to have a broader measurement for model performance. I would consider Extreme Gradient Boosting and Support Vector Machines, for example.
+- Features engineering which includes clustering to capture potential patterns that were not captured by looking at one feature alone.
+- Run correlation test across features to confirm that features are independent of each other
 
 
 
