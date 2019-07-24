@@ -14,6 +14,9 @@ Lending Club enables borrowers to create unsecured personal loans between $1,000
 
 **Approach:**
 
+
+**Note**: To run all the workbook on personal station, please first download "data" zip file, extract and put the files into a folder called "data" right next to all the jupyter notebooks.
+
 [**1.Data Wrangling**](https://github.com/sittingman/lending_repayment/blob/master/data_wrangling.ipynb)
 
 The dataset has 144 features, in which 'loan_status' will serve as the target feature.
@@ -23,6 +26,8 @@ Some columns have mostly missing data and will be dropped. Some information cann
 Some features will require data type modifications such as converting text into numeric values for model training.
 
 The cleaned data has been saved off as a separate file to simplify data access.
+
+
 
 [**2.Exploratory Analysis**](https://github.com/sittingman/lending_repayment/blob/master/data_exploratory.ipynb)
 
