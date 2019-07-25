@@ -4,10 +4,10 @@
 Lending Club enables borrowers to create unsecured personal loans between $1,000 and $40,000. The standard loan period is three years. Investors can search and browse the loan listings on Lending Club website and select loans that they want to invest in based on the information supplied about the borrower, amount of loan, loan grade, and loan purpose. Investors make money from interest. Lending Club makes money by charging borrowers an origination fee and investors a service fee.
 
 **Objective:** 
-- Predict the likelihood of paid off for loans that were approved by Lending Club. 
+- Predict the likelihood of paid off for loans based on information provided by borrowers at the point of application. 
 
 **Clients & Impact:** 
-- Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify approved loans that may have high risks of default based on historical information. Lending Club can put more attention to monitor those loans in order to plan contingencies on risk mitigation.
+- Clients are the investors who invest in the unsecured personal loans and Lending Club credit risks team. The analysis aims to help them to identify loan requests that may have high default rate based on historical information. Hence, Lending Club can minimize loss on granting the loans that will default ultimately.
 
 **Data Source:** [Lending Club Statistics](https://www.lendingclub.com/info/download-data.action). 2007-2013 [Data Dictionary](https://github.com/sittingman/lending_repayment/blob/master/data_dict.ipynb)
 - Use data from 2007-2012 as train set, and 2013 data as final test data
