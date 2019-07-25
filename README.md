@@ -93,4 +93,4 @@ Random Forest has more stable performance based on its high F1 score.
 - Run correlation test across features to access potential collinearity.
 
 
-#### [Presentation Slides](https://github.com/sittingman/lending_repayment/blob/master/Loan_repayment.pdf)
+#### [Presentation Slides](https://github.com/sittingman/lending_repayment/blob/master/presentation_slide.pdf)
