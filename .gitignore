@@ -2,3 +2,12 @@
 *.xlsx
 *.csv
 *.pptx
+.ipynb_checkpoints/data_exploratory-checkpoint.ipynb
+.ipynb_checkpoints/data_exploratory-checkpoint.ipynb
+.ipynb_checkpoints/data_wrangling-checkpoint.ipynb
+.ipynb_checkpoints/inference_stat-checkpoint.ipynb
+.ipynb_checkpoints/machine_learning-checkpoint.ipynb
+.ipynb_checkpoints/inference_stat-checkpoint.ipynb
+.ipynb_checkpoints/data_wrangling-checkpoint.ipynb
+.ipynb_checkpoints/data_exploratory-checkpoint.ipynb
+.ipynb_checkpoints/README-checkpoint.md
